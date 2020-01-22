@@ -32,7 +32,7 @@ workflow PanelOfNormals {
         File? regions
         String outputDir = "."
         String PONname = "PON"
-        Boolean performExplicitGcCorrection = false
+        Boolean performExplicitGcCorrection = length(inputBams) > 0
 
         Map[String, String] dockerImages = {
             "gatk": "quay.io/biocontainers/gatk4:4.1.2.0--1"
@@ -89,5 +89,21 @@ workflow PanelOfNormals {
         File preprocessedIntervals = preprocessIntervals.intervalList
         File? PON = createReadCountPanelOfNormals.PON
         File? annotatedIntervals = annotateIntervals.annotatedIntervals
+    }
+
+    parameter_meta {
+        inputBams: {description: "The BAM files for the samples to include in the PON. May be empty so just the annotated intervals can be created.",
+                    category: "common"}
+        inputBamIndexes: {description: "The indexes for the input BAM files.", category: "common"}
+        referenceFasta: {description: "The reference fasta file.", category: "required"}
+        referenceFastaDict: {description: "The sequence dictionary associated with the reference fasta file.", category: "required"}
+        referenceFastaFai: {description: "The index for the reference fasta file.", category: "required"}
+        regions: {description: "The regions to operate on.", category: "common"}
+        outputDir: {description: "The directory the output should be written to.", category: "common"}
+        PONname: {description: "The name the PON file should be given.", category: "common"}
+        performExplicitGcCorrection: {description: "Whether or not explicit GC correction should be used for PON generation. Setting this to false will also disable the creation of annotated intervals.",
+                                      category: "advanced"}
+        dockerImages: {description: "The docker images used. Changing this may result in errors which the developers may choose not to address.",
+                       category: "advanced"}
     }
 }
