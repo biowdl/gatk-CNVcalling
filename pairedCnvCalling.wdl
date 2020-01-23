@@ -90,6 +90,7 @@ workflow PairedCnvCalling {
         File caseUnsmoothedAlleleFractionParameters = caseSample.unsmoothedAlleleFractionParameters
         File caseModeledSegments = caseSample.modeledSegments
         File caseCopyRatioParameters = caseSample.copyRatioParameters
+        File caseAlleleFractionParameters = caseSample.alleleFractionParameters
         File caseCalledSegments = caseSample.calledSegments
         File caseCalledSegmentsIgv = caseSample.calledSegmentsIgv
         File caseDenoisedCopyRatiosPlot = caseSample.denoisedCopyRatiosPlot
@@ -100,7 +101,6 @@ workflow PairedCnvCalling {
         File caseDeltaScaledMedianAbsoluteDeviation = caseSample.deltaScaledMedianAbsoluteDeviation
         File caseModeledSegmentsPlot = caseSample.modeledSegmentsPlot
 
-        File controlAlleleFractionParameters = controlSample.alleleFractionParameters
         File controlAllelicCounts = controlSample.allelicCounts
         File controlReadCounts = controlSample.readCounts
         File controlStandardizedCopyRatios = controlSample.standardizedCopyRatios
