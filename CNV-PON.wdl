@@ -32,7 +32,7 @@ workflow PanelOfNormals {
         File? regions
         String outputDir = "."
         String PONname = "PON"
-        Boolean performExplicitGcCorrection = length(inputBams) > 0
+        Boolean performExplicitGcCorrection = true
 
         Map[String, String] dockerImages = {
             "gatk": "quay.io/biocontainers/gatk4:4.1.2.0--1"
