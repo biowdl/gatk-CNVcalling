@@ -35,7 +35,7 @@ workflow PanelOfNormals {
         Boolean performExplicitGcCorrection = true
 
         Map[String, String] dockerImages = {
-            "gatk": "quay.io/biocontainers/gatk4:4.1.2.0--1"
+            "gatk": "broadinstitute/gatk:4.1.4.0" # The biocontainer causes a spark related error for some reason...
         }
     }
 

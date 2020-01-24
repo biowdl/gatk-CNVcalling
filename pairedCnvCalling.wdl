@@ -56,7 +56,8 @@ workflow PairedCnvCalling {
             referenceFasta = referenceFasta,
             referenceFastaDict = referenceFastaDict,
             referenceFastaFai = referenceFastaFai,
-            outputDir = outputDir + "/" + controlSampleName + "/"
+            outputDir = outputDir + "/" + controlSampleName + "/",
+            dockerImages = dockerImages
     }
 
     call sampleWorkflow.Sample as caseSample {
@@ -72,7 +73,8 @@ workflow PairedCnvCalling {
             referenceFasta = referenceFasta,
             referenceFastaDict = referenceFastaDict,
             referenceFastaFai = referenceFastaFai,
-            outputDir = outputDir + "/" + caseSampleName + "/"
+            outputDir = outputDir + "/" + caseSampleName + "/",
+            dockerImages = dockerImages
     }
 
     output {
