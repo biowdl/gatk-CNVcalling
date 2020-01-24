@@ -38,7 +38,7 @@ workflow Sample {
         String outputDir = "."
 
         Map[String, String] dockerImages = {
-            "gatk": "quay.io/biocontainers/gatk4:4.1.2.0--1"
+            "gatk": "broadinstitute/gatk:4.1.4.0" # The biocontainer doesn't seem to contain R.
         }
     }
 
@@ -119,7 +119,7 @@ workflow Sample {
         File standardizedCopyRatios = denoiseReadCounts.standardizedCopyRatios
         File denoisedCopyRatios = denoiseReadCounts.denoisedCopyRatios
         File hetrozygousAllelicCounts = modelSegments.hetrozygousAllelicCounts
-        File normalHetrozygousAllelicCounts = modelSegments.normalHetrozygousAllelicCounts
+        File? normalHetrozygousAllelicCounts = modelSegments.normalHetrozygousAllelicCounts
         File copyRatioSegments = modelSegments.copyRatioSegments
         File copyRatioCBS = modelSegments.copyRatioCBS
         File alleleFractionCBS = modelSegments.alleleFractionCBS

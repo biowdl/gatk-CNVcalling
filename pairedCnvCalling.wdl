@@ -40,7 +40,7 @@ workflow PairedCnvCalling {
         File referenceFastaFai
 
         Map[String, String] dockerImages = {
-            "gatk": "quay.io/biocontainers/gatk4:4.1.2.0--1"
+            "gatk": "broadinstitute/gatk:4.1.4.0" # The biocontainer doesn't seem to contain R.
         }
     }
 
@@ -83,7 +83,7 @@ workflow PairedCnvCalling {
         File caseStandardizedCopyRatios = caseSample.standardizedCopyRatios
         File caseDenoisedCopyRatios = caseSample.denoisedCopyRatios
         File caseHetrozygousAllelicCounts = caseSample.hetrozygousAllelicCounts
-        File caseNormalHetrozygousAllelicCounts = caseSample.normalHetrozygousAllelicCounts
+        File caseNormalHetrozygousAllelicCounts = select_first([caseSample.normalHetrozygousAllelicCounts])
         File caseCopyRatioSegments = caseSample.copyRatioSegments
         File caseCopyRatioCBS = caseSample.copyRatioCBS
         File caseAlleleFractionCBS = caseSample.alleleFractionCBS
@@ -108,7 +108,6 @@ workflow PairedCnvCalling {
         File controlStandardizedCopyRatios = controlSample.standardizedCopyRatios
         File controlDenoisedCopyRatios = controlSample.denoisedCopyRatios
         File controlHetrozygousAllelicCounts = controlSample.hetrozygousAllelicCounts
-        File controlNormalHetrozygousAllelicCounts = controlSample.normalHetrozygousAllelicCounts
         File controlCopyRatioSegments = controlSample.copyRatioSegments
         File controlCopyRatioCBS = controlSample.copyRatioCBS
         File controlAlleleFractionCBS = controlSample.alleleFractionCBS
