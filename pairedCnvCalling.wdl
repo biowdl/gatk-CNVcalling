@@ -151,4 +151,10 @@ workflow PairedCnvCalling {
         dockerImages: {description: "The docker images used. Changing this may result in errors which the developers may choose not to address.",
                        category: "advanced"}
     }
+
+    meta {
+        WDL_AID: {
+            exclude: ["controlSample.matchedNormalAllelicCounts"]
+        }
+    }
 }
