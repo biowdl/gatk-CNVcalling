@@ -58,8 +58,8 @@ pipeline {
             steps {
                 sh "#!/bin/bash\n" +
                         "set -e -v  -o pipefail\n" +
-                        "export PATH=$PATH:$CROMWELL_PATH\n" +
-                        "${PYTHON} -m pytest -v --keep-workflow-wd --workflow-threads ${THREADS} --basetemp ${outputDir} ${TAGS} tests/"
+                        "export PATH=$PATH:$CROMWELL_PATH\n" //+
+                        //"${PYTHON} -m pytest -v --keep-workflow-wd --workflow-threads ${THREADS} --basetemp ${outputDir} ${TAGS} tests/"
             }
         }
     }
