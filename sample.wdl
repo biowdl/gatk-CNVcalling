@@ -31,6 +31,7 @@ workflow Sample {
         File inputBam
         File inputBamIndex
         File commonVariantSites
+        File? commonVariantSitesIndex
         String sampleName
         File referenceFasta
         File referenceFastaDict
@@ -46,6 +47,7 @@ workflow Sample {
         input:
             allelicCountsPath = outputDir + "/" + sampleName + ".allelic_counts.tsv",
             commonVariantSites = commonVariantSites,
+            commonVariantSitesIndex = commonVariantSitesIndex,
             inputBam = inputBam,
             inputBamIndex = inputBamIndex,
             referenceFasta = referenceFasta,
