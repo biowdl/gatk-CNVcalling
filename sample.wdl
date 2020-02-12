@@ -152,7 +152,8 @@ workflow Sample {
         matchedNormalAllelicCounts: {description: "The allelicCounts as generate by CollectAllelicCounts for a matched normal.", category: "common"}
         inputBam: {description: "The BAM file for which CNVs should be called.", category: "required"}
         inputBamIndex: {description: "The index for the input BAM file.", category: "required"}
-        commonVariantSites: {description: "Interval list of common variant sites (to retrieve the allelic counts for).", category: "required"}
+        commonVariantSites: {description: "Interval list or VCF file of common variant sites (to retrieve the allelic counts for). Preferably a list variants from the sample being analysed. For targeted/exome sequencing the list should be limited to variants within the sequenced regions, due to memory usage.", category: "required"}
+        commonVariantSitesIndex: {description: "The index for commonVariantSitesIndex.", category: "common"}
         sampleName: {description: "The name of the sample, used for file naming.", category: "required"}
         referenceFasta: {description: "The reference fasta file.", category: "required"}
         referenceFastaDict: {description: "The sequence dictionary associated with the reference fasta file.", category: "required"}
