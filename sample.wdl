@@ -37,6 +37,7 @@ workflow Sample {
         File referenceFastaDict
         File referenceFastaFai
         String outputDir = "."
+        Int? minimumContigLength
 
         Map[String, String] dockerImages = {
             "gatk": "broadinstitute/gatk:4.1.4.0" # The biocontainer doesn't seem to contain R.
@@ -101,7 +102,8 @@ workflow Sample {
             outputPrefix = sampleName,
             standardizedCopyRatios = denoiseReadCounts.standardizedCopyRatios,
             denoisedCopyRatios = denoiseReadCounts.denoisedCopyRatios,
-            dockerImage = dockerImages["gatk"]
+            dockerImage = dockerImages["gatk"],
+            minimumContigLength = minimumContigLength
     }
 
     call gatk.PlotModeledSegments as plotModeledSegments {
@@ -112,7 +114,8 @@ workflow Sample {
             denoisedCopyRatios = denoiseReadCounts.denoisedCopyRatios,
             segments = modelSegments.modeledSegments,
             allelicCounts = modelSegments.hetrozygousAllelicCounts,
-            dockerImage = dockerImages["gatk"]
+            dockerImage = dockerImages["gatk"],
+            minimumContigLength = minimumContigLength
     }
 
     output {
@@ -158,6 +161,7 @@ workflow Sample {
         referenceFasta: {description: "The reference fasta file.", category: "required"}
         referenceFastaDict: {description: "The sequence dictionary associated with the reference fasta file.", category: "required"}
         referenceFastaFai: {description: "The index for the reference fasta file.", category: "required"}
+        minimumContigLength: {description: "The minimum length for a contig to be included in the plots.", category: "advanced"}
         outputDir: {description: "The directory the output should be written to.", category: "common"}
         dockerImages: {description: "The docker images used. Changing this may result in errors which the developers may choose not to address.",
                        category: "advanced"}
