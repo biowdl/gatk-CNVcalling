@@ -11,6 +11,7 @@ that users understand how the changes affect the new version.
 
 version 0.1-dev
 ---------------------------
++ Added input for minimum contig length
 + Added `commonVariantSitesIndex` input
 + Added documentation
 + Added pairedCnvCalling.wdl and sample.wdl
