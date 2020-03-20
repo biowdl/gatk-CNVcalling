@@ -39,6 +39,7 @@ workflow PairedCnvCalling {
         File referenceFasta
         File referenceFastaDict
         File referenceFastaFai
+        Int? minimumContigLength
 
         Map[String, String] dockerImages = {
             "gatk": "broadinstitute/gatk:4.1.4.0" # The biocontainer doesn't seem to contain R.
@@ -58,6 +59,7 @@ workflow PairedCnvCalling {
             referenceFasta = referenceFasta,
             referenceFastaDict = referenceFastaDict,
             referenceFastaFai = referenceFastaFai,
+            minimumContigLength = minimumContigLength,
             outputDir = outputDir + "/" + controlSampleName + "/",
             dockerImages = dockerImages
     }
@@ -76,6 +78,7 @@ workflow PairedCnvCalling {
             referenceFasta = referenceFasta,
             referenceFastaDict = referenceFastaDict,
             referenceFastaFai = referenceFastaFai,
+            minimumContigLength = minimumContigLength,
             outputDir = outputDir + "/" + caseSampleName + "/",
             dockerImages = dockerImages
     }
@@ -152,6 +155,7 @@ workflow PairedCnvCalling {
         referenceFastaDict: {description: "The sequence dictionary associated with the reference fasta file.", category: "required"}
         referenceFastaFai: {description: "The index for the reference fasta file.", category: "required"}
         outputDir: {description: "The directory the output should be written to.", category: "common"}
+        minimumContigLength: {description: "The minimum length for a contig to be included in the plots.", category: "advanced"}
         dockerImages: {description: "The docker images used. Changing this may result in errors which the developers may choose not to address.",
                        category: "advanced"}
     }
