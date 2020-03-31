@@ -171,11 +171,6 @@ PairedCnvCalling.
     <i>String </i><i>&mdash; Default:</i> <code>"32G"</code><br />
     The amount of memory this job will use.
 </dd>
-<dt id="PairedCnvCalling.caseSample.plotDenoisedCopyRatios.minimumContigLength"><a href="#PairedCnvCalling.caseSample.plotDenoisedCopyRatios.minimumContigLength">PairedCnvCalling.caseSample.plotDenoisedCopyRatios.minimumContigLength</a></dt>
-<dd>
-    <i>Int? </i><br />
-    The minimum length for a contig to be included in the plots.
-</dd>
 <dt id="PairedCnvCalling.caseSample.plotModeledSegments.javaXmx"><a href="#PairedCnvCalling.caseSample.plotModeledSegments.javaXmx">PairedCnvCalling.caseSample.plotModeledSegments.javaXmx</a></dt>
 <dd>
     <i>String </i><i>&mdash; Default:</i> <code>"7G"</code><br />
@@ -185,11 +180,6 @@ PairedCnvCalling.
 <dd>
     <i>String </i><i>&mdash; Default:</i> <code>"21G"</code><br />
     The amount of memory this job will use.
-</dd>
-<dt id="PairedCnvCalling.caseSample.plotModeledSegments.minimumContigLength"><a href="#PairedCnvCalling.caseSample.plotModeledSegments.minimumContigLength">PairedCnvCalling.caseSample.plotModeledSegments.minimumContigLength</a></dt>
-<dd>
-    <i>Int? </i><br />
-    The minimum length for a contig to be included in the plots.
 </dd>
 <dt id="PairedCnvCalling.controlSample.callCopyRatioSegments.javaXmx"><a href="#PairedCnvCalling.controlSample.callCopyRatioSegments.javaXmx">PairedCnvCalling.controlSample.callCopyRatioSegments.javaXmx</a></dt>
 <dd>
@@ -266,11 +256,6 @@ PairedCnvCalling.
     <i>String </i><i>&mdash; Default:</i> <code>"32G"</code><br />
     The amount of memory this job will use.
 </dd>
-<dt id="PairedCnvCalling.controlSample.plotDenoisedCopyRatios.minimumContigLength"><a href="#PairedCnvCalling.controlSample.plotDenoisedCopyRatios.minimumContigLength">PairedCnvCalling.controlSample.plotDenoisedCopyRatios.minimumContigLength</a></dt>
-<dd>
-    <i>Int? </i><br />
-    The minimum length for a contig to be included in the plots.
-</dd>
 <dt id="PairedCnvCalling.controlSample.plotModeledSegments.javaXmx"><a href="#PairedCnvCalling.controlSample.plotModeledSegments.javaXmx">PairedCnvCalling.controlSample.plotModeledSegments.javaXmx</a></dt>
 <dd>
     <i>String </i><i>&mdash; Default:</i> <code>"7G"</code><br />
@@ -281,15 +266,15 @@ PairedCnvCalling.
     <i>String </i><i>&mdash; Default:</i> <code>"21G"</code><br />
     The amount of memory this job will use.
 </dd>
-<dt id="PairedCnvCalling.controlSample.plotModeledSegments.minimumContigLength"><a href="#PairedCnvCalling.controlSample.plotModeledSegments.minimumContigLength">PairedCnvCalling.controlSample.plotModeledSegments.minimumContigLength</a></dt>
-<dd>
-    <i>Int? </i><br />
-    The minimum length for a contig to be included in the plots.
-</dd>
 <dt id="PairedCnvCalling.dockerImages"><a href="#PairedCnvCalling.dockerImages">PairedCnvCalling.dockerImages</a></dt>
 <dd>
     <i>Map[String,String] </i><i>&mdash; Default:</i> <code>{"gatk": "broadinstitute/gatk:4.1.4.0"}</code><br />
     The docker images used. Changing this may result in errors which the developers may choose not to address.
+</dd>
+<dt id="PairedCnvCalling.minimumContigLength"><a href="#PairedCnvCalling.minimumContigLength">PairedCnvCalling.minimumContigLength</a></dt>
+<dd>
+    <i>Int? </i><br />
+    The minimum length for a contig to be included in the plots.
 </dd>
 </dl>
 </details>
