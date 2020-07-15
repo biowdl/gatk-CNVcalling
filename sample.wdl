@@ -43,6 +43,7 @@ workflow Sample {
             "gatk": "broadinstitute/gatk:4.1.4.0" # The biocontainer doesn't seem to contain R.
         }
     }
+    meta {allowNestedInputs: true}
 
     call gatk.CollectAllelicCounts as collectAllelicCounts {
         input:

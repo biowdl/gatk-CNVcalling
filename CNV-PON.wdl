@@ -38,6 +38,7 @@ workflow PanelOfNormals {
             "gatk": "broadinstitute/gatk:4.1.4.0" # The biocontainer causes a spark related error for some reason...
         }
     }
+    meta {allowNestedInputs: true}
 
     call gatk.PreprocessIntervals as preprocessIntervals {
         input:
