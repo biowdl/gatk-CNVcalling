@@ -40,7 +40,7 @@ workflow Sample {
         Int? minimumContigLength
 
         Map[String, String] dockerImages = {
-            "gatk": "broadinstitute/gatk:4.1.4.0" # The biocontainer doesn't seem to contain R.
+            "gatk": "broadinstitute/gatk:4.1.8.0" # The biocontainer doesn't seem to contain R.
         }
     }
     meta {allowNestedInputs: true}
