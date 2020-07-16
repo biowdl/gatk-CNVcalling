@@ -1,0 +1,10 @@
+- name: PON
+  tags:
+    - integration
+  command: >-
+    cromwell run -o tests/cromwell_config/cromwell_options.json
+    -i tests/integration/CNV-PON.json CNV-pon.wdl
+  files:
+    - path: "test-output/preprocessed.interval_list"
+    - path: "test-output/PON.hdf5"
+    - path: "test-output/annotated_intervals.tsv"

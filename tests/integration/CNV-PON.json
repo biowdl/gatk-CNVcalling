@@ -1,7 +1,7 @@
 {
-  "PanelOfNormals.inputBams": [],
-  "PanelOfNormals.inputBamIndexes": [],
-  "PanelOfNormals.referenceFasta": "",
-  "PanelOfNormals.referenceFastaDict": "",
-  "PanelOfNormals.referenceFastaFai": ""
+  "PanelOfNormals.inputBams": ["tests/data/wgs2.realign.bam", "tests/data/wgs3.bam"],
+  "PanelOfNormals.inputBamIndexes": ["tests/data/wgs2.realign.bai", "tests/data/wgs3.bai"],
+  "PanelOfNormals.referenceFasta": "tests/data/reference.fasta",
+  "PanelOfNormals.referenceFastaDict": "tests/data/reference.dict",
+  "PanelOfNormals.referenceFastaFai": "tests/data/reference.fasta.fai"
 }
