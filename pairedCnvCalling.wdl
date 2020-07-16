@@ -164,5 +164,6 @@ workflow PairedCnvCalling {
         WDL_AID: {
             exclude: ["controlSample.matchedNormalAllelicCounts"]
         }
+        allowNestedInputs: true
     }
 }
