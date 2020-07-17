@@ -1,0 +1,5 @@
+{
+  "PanelOfNormals.referenceFasta": "tests/data/reference.fasta",
+  "PanelOfNormals.referenceFastaDict": "tests/data/reference.dict",
+  "PanelOfNormals.referenceFastaFai": "tests/data/reference.fasta.fai"
+}

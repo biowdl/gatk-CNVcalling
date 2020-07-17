@@ -39,7 +39,7 @@ after_failure:
 matrix:
   include:
     - env: TEST=PON
-    #- env: TEST=PON_without_bams
+    - env: TEST=PON_without_bams
     #- env: TEST=paired
     - env: TEST="Womtool validate and submodule up to date"
       stage: lint
