@@ -138,7 +138,7 @@ workflow Sample {
         File calledSegments = callCopyRatioSegments.calledSegments
         File calledSegmentsIgv = callCopyRatioSegments.calledSegmentsIgv
         File denoisedCopyRatiosPlot = plotDenoisedCopyRatios.denoisedCopyRatiosPlot
-        File denoisedCopyRatiosLimitedPlot = plotDenoisedCopyRatios.denoisedCopyRatiosLimitedPlot
+        File? denoisedCopyRatiosLimitedPlot = plotDenoisedCopyRatios.denoisedCopyRatiosLimitedPlot
         File standardizedMedianAbsoluteDeviation = plotDenoisedCopyRatios.standardizedMedianAbsoluteDeviation
         File denoisedMedianAbsoluteDeviation = plotDenoisedCopyRatios.denoisedMedianAbsoluteDeviation
         File deltaMedianAbsoluteDeviation = plotDenoisedCopyRatios.deltaMedianAbsoluteDeviation

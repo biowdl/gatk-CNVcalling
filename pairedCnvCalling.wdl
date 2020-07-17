@@ -42,7 +42,7 @@ workflow PairedCnvCalling {
         Int? minimumContigLength
 
         Map[String, String] dockerImages = {
-            "gatk": "broadinstitute/gatk:4.1.8.0" # The biocontainer doesn't seem to contain R.
+            "gatk": "broadinstitute/gatk:4.1.8.0"  # There are some issues with the biocontainer
         }
     }
 
@@ -102,7 +102,7 @@ workflow PairedCnvCalling {
         File caseCalledSegments = caseSample.calledSegments
         File caseCalledSegmentsIgv = caseSample.calledSegmentsIgv
         File caseDenoisedCopyRatiosPlot = caseSample.denoisedCopyRatiosPlot
-        File caseDenoisedCopyRatiosLimitedPlot = caseSample.denoisedCopyRatiosLimitedPlot
+        File? caseDenoisedCopyRatiosLimitedPlot = caseSample.denoisedCopyRatiosLimitedPlot
         File caseStandardizedMedianAbsoluteDeviation = caseSample.standardizedMedianAbsoluteDeviation
         File caseDenoisedMedianAbsoluteDeviation = caseSample.denoisedMedianAbsoluteDeviation
         File caseDeltaMedianAbsoluteDeviation = caseSample.deltaMedianAbsoluteDeviation
@@ -126,7 +126,7 @@ workflow PairedCnvCalling {
         File controlCalledSegments = controlSample.calledSegments
         File controlCalledSegmentsIgv = controlSample.calledSegmentsIgv
         File controlDenoisedCopyRatiosPlot = controlSample.denoisedCopyRatiosPlot
-        File controlDenoisedCopyRatiosLimitedPlot = controlSample.denoisedCopyRatiosLimitedPlot
+        File? controlDenoisedCopyRatiosLimitedPlot = controlSample.denoisedCopyRatiosLimitedPlot
         File controlStandardizedMedianAbsoluteDeviation = controlSample.standardizedMedianAbsoluteDeviation
         File controlDenoisedMedianAbsoluteDeviation = controlSample.denoisedMedianAbsoluteDeviation
         File controlDeltaMedianAbsoluteDeviation = controlSample.deltaMedianAbsoluteDeviation
