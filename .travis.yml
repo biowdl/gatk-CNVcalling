@@ -34,11 +34,13 @@ script:
 after_failure:
   # Get the last 1000 lines of the cromwell log to catch the error.
   - bash -c 'tail -n 1000 /tmp/pytest_workflow_*/*/log.out'
+  - bash -c 'tail -n 1000 $(find /tmp/pytest_workflow_* -name stderr)'
 
 
 matrix:
   include:
-    #- env: TEST=PON
+    - env: TEST=PON
+    - env: TEST=PON_without_bams
     #- env: TEST=paired
     - env: TEST="Womtool validate and submodule up to date"
       stage: lint
