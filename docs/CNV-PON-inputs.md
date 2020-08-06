@@ -88,8 +88,13 @@ PanelOfNormals.
 </dd>
 <dt id="PanelOfNormals.annotateIntervals.memory"><a href="#PanelOfNormals.annotateIntervals.memory">PanelOfNormals.annotateIntervals.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"10G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"3G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PanelOfNormals.annotateIntervals.timeMinutes"><a href="#PanelOfNormals.annotateIntervals.timeMinutes">PanelOfNormals.annotateIntervals.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>5</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PanelOfNormals.collectReadCounts.intervalMergingRule"><a href="#PanelOfNormals.collectReadCounts.intervalMergingRule">PanelOfNormals.collectReadCounts.intervalMergingRule</a></dt>
 <dd>
@@ -103,8 +108,13 @@ PanelOfNormals.
 </dd>
 <dt id="PanelOfNormals.collectReadCounts.memory"><a href="#PanelOfNormals.collectReadCounts.memory">PanelOfNormals.collectReadCounts.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"35G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"8G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PanelOfNormals.collectReadCounts.timeMinutes"><a href="#PanelOfNormals.collectReadCounts.timeMinutes">PanelOfNormals.collectReadCounts.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>1 + ceil((size(inputBam,"G") * 5))</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PanelOfNormals.createReadCountPanelOfNormals.javaXmx"><a href="#PanelOfNormals.createReadCountPanelOfNormals.javaXmx">PanelOfNormals.createReadCountPanelOfNormals.javaXmx</a></dt>
 <dd>
@@ -113,12 +123,17 @@ PanelOfNormals.
 </dd>
 <dt id="PanelOfNormals.createReadCountPanelOfNormals.memory"><a href="#PanelOfNormals.createReadCountPanelOfNormals.memory">PanelOfNormals.createReadCountPanelOfNormals.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"21G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"8G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PanelOfNormals.createReadCountPanelOfNormals.timeMinutes"><a href="#PanelOfNormals.createReadCountPanelOfNormals.timeMinutes">PanelOfNormals.createReadCountPanelOfNormals.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>5</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PanelOfNormals.dockerImages"><a href="#PanelOfNormals.dockerImages">PanelOfNormals.dockerImages</a></dt>
 <dd>
-    <i>Map[String,String] </i><i>&mdash; Default:</i> <code>{"gatk": "broadinstitute/gatk:4.1.4.0"}</code><br />
+    <i>Map[String,String] </i><i>&mdash; Default:</i> <code>{"gatk": "broadinstitute/gatk:4.1.8.0"}</code><br />
     The docker images used. Changing this may result in errors which the developers may choose not to address.
 </dd>
 <dt id="PanelOfNormals.performExplicitGcCorrection"><a href="#PanelOfNormals.performExplicitGcCorrection">PanelOfNormals.performExplicitGcCorrection</a></dt>
@@ -138,18 +153,23 @@ PanelOfNormals.
 </dd>
 <dt id="PanelOfNormals.preprocessIntervals.javaXmx"><a href="#PanelOfNormals.preprocessIntervals.javaXmx">PanelOfNormals.preprocessIntervals.javaXmx</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"2G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"3G"</code><br />
     The maximum memory available to the program. Should be lower than `memory` to accommodate JVM overhead.
 </dd>
 <dt id="PanelOfNormals.preprocessIntervals.memory"><a href="#PanelOfNormals.preprocessIntervals.memory">PanelOfNormals.preprocessIntervals.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"10G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"4G"</code><br />
     The amount of memory this job will use.
 </dd>
 <dt id="PanelOfNormals.preprocessIntervals.padding"><a href="#PanelOfNormals.preprocessIntervals.padding">PanelOfNormals.preprocessIntervals.padding</a></dt>
 <dd>
     <i>Int </i><i>&mdash; Default:</i> <code>if defined(intervals) then 250 else 0</code><br />
     The padding to be added to the bins. Should be 0 if contiguos binning is used, eg with WGS.
+</dd>
+<dt id="PanelOfNormals.preprocessIntervals.timeMinutes"><a href="#PanelOfNormals.preprocessIntervals.timeMinutes">PanelOfNormals.preprocessIntervals.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>1 + ceil((size(referenceFasta,"G") * 6))</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 </dl>
 </details>

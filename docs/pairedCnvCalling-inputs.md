@@ -98,23 +98,33 @@ PairedCnvCalling.
 <dl>
 <dt id="PairedCnvCalling.caseSample.callCopyRatioSegments.javaXmx"><a href="#PairedCnvCalling.caseSample.callCopyRatioSegments.javaXmx">PairedCnvCalling.caseSample.callCopyRatioSegments.javaXmx</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"6G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"2G"</code><br />
     The maximum memory available to the program. Should be lower than `memory` to accommodate JVM overhead.
 </dd>
 <dt id="PairedCnvCalling.caseSample.callCopyRatioSegments.memory"><a href="#PairedCnvCalling.caseSample.callCopyRatioSegments.memory">PairedCnvCalling.caseSample.callCopyRatioSegments.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"21G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"3G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PairedCnvCalling.caseSample.callCopyRatioSegments.timeMinutes"><a href="#PairedCnvCalling.caseSample.callCopyRatioSegments.timeMinutes">PairedCnvCalling.caseSample.callCopyRatioSegments.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>2</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PairedCnvCalling.caseSample.collectAllelicCounts.javaXmx"><a href="#PairedCnvCalling.caseSample.collectAllelicCounts.javaXmx">PairedCnvCalling.caseSample.collectAllelicCounts.javaXmx</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"30G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"10G"</code><br />
     The maximum memory available to the program. Should be lower than `memory` to accommodate JVM overhead.
 </dd>
 <dt id="PairedCnvCalling.caseSample.collectAllelicCounts.memory"><a href="#PairedCnvCalling.caseSample.collectAllelicCounts.memory">PairedCnvCalling.caseSample.collectAllelicCounts.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"90G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"11G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PairedCnvCalling.caseSample.collectAllelicCounts.timeMinutes"><a href="#PairedCnvCalling.caseSample.collectAllelicCounts.timeMinutes">PairedCnvCalling.caseSample.collectAllelicCounts.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>120</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PairedCnvCalling.caseSample.collectReadCounts.intervalMergingRule"><a href="#PairedCnvCalling.caseSample.collectReadCounts.intervalMergingRule">PairedCnvCalling.caseSample.collectReadCounts.intervalMergingRule</a></dt>
 <dd>
@@ -128,18 +138,28 @@ PairedCnvCalling.
 </dd>
 <dt id="PairedCnvCalling.caseSample.collectReadCounts.memory"><a href="#PairedCnvCalling.caseSample.collectReadCounts.memory">PairedCnvCalling.caseSample.collectReadCounts.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"35G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"8G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PairedCnvCalling.caseSample.collectReadCounts.timeMinutes"><a href="#PairedCnvCalling.caseSample.collectReadCounts.timeMinutes">PairedCnvCalling.caseSample.collectReadCounts.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>1 + ceil((size(inputBam,"G") * 5))</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PairedCnvCalling.caseSample.denoiseReadCounts.javaXmx"><a href="#PairedCnvCalling.caseSample.denoiseReadCounts.javaXmx">PairedCnvCalling.caseSample.denoiseReadCounts.javaXmx</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"13G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"4G"</code><br />
     The maximum memory available to the program. Should be lower than `memory` to accommodate JVM overhead.
 </dd>
 <dt id="PairedCnvCalling.caseSample.denoiseReadCounts.memory"><a href="#PairedCnvCalling.caseSample.denoiseReadCounts.memory">PairedCnvCalling.caseSample.denoiseReadCounts.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"39G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"5G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PairedCnvCalling.caseSample.denoiseReadCounts.timeMinutes"><a href="#PairedCnvCalling.caseSample.denoiseReadCounts.timeMinutes">PairedCnvCalling.caseSample.denoiseReadCounts.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>5</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PairedCnvCalling.caseSample.modelSegments.javaXmx"><a href="#PairedCnvCalling.caseSample.modelSegments.javaXmx">PairedCnvCalling.caseSample.modelSegments.javaXmx</a></dt>
 <dd>
@@ -153,7 +173,7 @@ PairedCnvCalling.
 </dd>
 <dt id="PairedCnvCalling.caseSample.modelSegments.memory"><a href="#PairedCnvCalling.caseSample.modelSegments.memory">PairedCnvCalling.caseSample.modelSegments.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"64G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"11G"</code><br />
     The amount of memory this job will use.
 </dd>
 <dt id="PairedCnvCalling.caseSample.modelSegments.minimumTotalAlleleCountCase"><a href="#PairedCnvCalling.caseSample.modelSegments.minimumTotalAlleleCountCase">PairedCnvCalling.caseSample.modelSegments.minimumTotalAlleleCountCase</a></dt>
@@ -161,45 +181,70 @@ PairedCnvCalling.
     <i>Int </i><i>&mdash; Default:</i> <code>if defined(normalAllelicCounts) then 0 else 30</code><br />
     Equivalent to gatk ModelSeqments' `--minimum-total-allele-count-case` option.
 </dd>
+<dt id="PairedCnvCalling.caseSample.modelSegments.timeMinutes"><a href="#PairedCnvCalling.caseSample.modelSegments.timeMinutes">PairedCnvCalling.caseSample.modelSegments.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>60</code><br />
+    The maximum amount of time the job will run in minutes.
+</dd>
 <dt id="PairedCnvCalling.caseSample.plotDenoisedCopyRatios.javaXmx"><a href="#PairedCnvCalling.caseSample.plotDenoisedCopyRatios.javaXmx">PairedCnvCalling.caseSample.plotDenoisedCopyRatios.javaXmx</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"7G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"3G"</code><br />
     The maximum memory available to the program. Should be lower than `memory` to accommodate JVM overhead.
 </dd>
 <dt id="PairedCnvCalling.caseSample.plotDenoisedCopyRatios.memory"><a href="#PairedCnvCalling.caseSample.plotDenoisedCopyRatios.memory">PairedCnvCalling.caseSample.plotDenoisedCopyRatios.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"32G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"4G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PairedCnvCalling.caseSample.plotDenoisedCopyRatios.timeMinutes"><a href="#PairedCnvCalling.caseSample.plotDenoisedCopyRatios.timeMinutes">PairedCnvCalling.caseSample.plotDenoisedCopyRatios.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>2</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PairedCnvCalling.caseSample.plotModeledSegments.javaXmx"><a href="#PairedCnvCalling.caseSample.plotModeledSegments.javaXmx">PairedCnvCalling.caseSample.plotModeledSegments.javaXmx</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"7G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"3G"</code><br />
     The maximum memory available to the program. Should be lower than `memory` to accommodate JVM overhead.
 </dd>
 <dt id="PairedCnvCalling.caseSample.plotModeledSegments.memory"><a href="#PairedCnvCalling.caseSample.plotModeledSegments.memory">PairedCnvCalling.caseSample.plotModeledSegments.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"21G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"4G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PairedCnvCalling.caseSample.plotModeledSegments.timeMinutes"><a href="#PairedCnvCalling.caseSample.plotModeledSegments.timeMinutes">PairedCnvCalling.caseSample.plotModeledSegments.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>2</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PairedCnvCalling.controlSample.callCopyRatioSegments.javaXmx"><a href="#PairedCnvCalling.controlSample.callCopyRatioSegments.javaXmx">PairedCnvCalling.controlSample.callCopyRatioSegments.javaXmx</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"6G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"2G"</code><br />
     The maximum memory available to the program. Should be lower than `memory` to accommodate JVM overhead.
 </dd>
 <dt id="PairedCnvCalling.controlSample.callCopyRatioSegments.memory"><a href="#PairedCnvCalling.controlSample.callCopyRatioSegments.memory">PairedCnvCalling.controlSample.callCopyRatioSegments.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"21G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"3G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PairedCnvCalling.controlSample.callCopyRatioSegments.timeMinutes"><a href="#PairedCnvCalling.controlSample.callCopyRatioSegments.timeMinutes">PairedCnvCalling.controlSample.callCopyRatioSegments.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>2</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PairedCnvCalling.controlSample.collectAllelicCounts.javaXmx"><a href="#PairedCnvCalling.controlSample.collectAllelicCounts.javaXmx">PairedCnvCalling.controlSample.collectAllelicCounts.javaXmx</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"30G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"10G"</code><br />
     The maximum memory available to the program. Should be lower than `memory` to accommodate JVM overhead.
 </dd>
 <dt id="PairedCnvCalling.controlSample.collectAllelicCounts.memory"><a href="#PairedCnvCalling.controlSample.collectAllelicCounts.memory">PairedCnvCalling.controlSample.collectAllelicCounts.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"90G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"11G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PairedCnvCalling.controlSample.collectAllelicCounts.timeMinutes"><a href="#PairedCnvCalling.controlSample.collectAllelicCounts.timeMinutes">PairedCnvCalling.controlSample.collectAllelicCounts.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>120</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PairedCnvCalling.controlSample.collectReadCounts.intervalMergingRule"><a href="#PairedCnvCalling.controlSample.collectReadCounts.intervalMergingRule">PairedCnvCalling.controlSample.collectReadCounts.intervalMergingRule</a></dt>
 <dd>
@@ -213,18 +258,28 @@ PairedCnvCalling.
 </dd>
 <dt id="PairedCnvCalling.controlSample.collectReadCounts.memory"><a href="#PairedCnvCalling.controlSample.collectReadCounts.memory">PairedCnvCalling.controlSample.collectReadCounts.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"35G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"8G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PairedCnvCalling.controlSample.collectReadCounts.timeMinutes"><a href="#PairedCnvCalling.controlSample.collectReadCounts.timeMinutes">PairedCnvCalling.controlSample.collectReadCounts.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>1 + ceil((size(inputBam,"G") * 5))</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PairedCnvCalling.controlSample.denoiseReadCounts.javaXmx"><a href="#PairedCnvCalling.controlSample.denoiseReadCounts.javaXmx">PairedCnvCalling.controlSample.denoiseReadCounts.javaXmx</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"13G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"4G"</code><br />
     The maximum memory available to the program. Should be lower than `memory` to accommodate JVM overhead.
 </dd>
 <dt id="PairedCnvCalling.controlSample.denoiseReadCounts.memory"><a href="#PairedCnvCalling.controlSample.denoiseReadCounts.memory">PairedCnvCalling.controlSample.denoiseReadCounts.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"39G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"5G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PairedCnvCalling.controlSample.denoiseReadCounts.timeMinutes"><a href="#PairedCnvCalling.controlSample.denoiseReadCounts.timeMinutes">PairedCnvCalling.controlSample.denoiseReadCounts.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>5</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PairedCnvCalling.controlSample.modelSegments.javaXmx"><a href="#PairedCnvCalling.controlSample.modelSegments.javaXmx">PairedCnvCalling.controlSample.modelSegments.javaXmx</a></dt>
 <dd>
@@ -238,7 +293,7 @@ PairedCnvCalling.
 </dd>
 <dt id="PairedCnvCalling.controlSample.modelSegments.memory"><a href="#PairedCnvCalling.controlSample.modelSegments.memory">PairedCnvCalling.controlSample.modelSegments.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"64G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"11G"</code><br />
     The amount of memory this job will use.
 </dd>
 <dt id="PairedCnvCalling.controlSample.modelSegments.minimumTotalAlleleCountCase"><a href="#PairedCnvCalling.controlSample.modelSegments.minimumTotalAlleleCountCase">PairedCnvCalling.controlSample.modelSegments.minimumTotalAlleleCountCase</a></dt>
@@ -246,29 +301,44 @@ PairedCnvCalling.
     <i>Int </i><i>&mdash; Default:</i> <code>if defined(normalAllelicCounts) then 0 else 30</code><br />
     Equivalent to gatk ModelSeqments' `--minimum-total-allele-count-case` option.
 </dd>
+<dt id="PairedCnvCalling.controlSample.modelSegments.timeMinutes"><a href="#PairedCnvCalling.controlSample.modelSegments.timeMinutes">PairedCnvCalling.controlSample.modelSegments.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>60</code><br />
+    The maximum amount of time the job will run in minutes.
+</dd>
 <dt id="PairedCnvCalling.controlSample.plotDenoisedCopyRatios.javaXmx"><a href="#PairedCnvCalling.controlSample.plotDenoisedCopyRatios.javaXmx">PairedCnvCalling.controlSample.plotDenoisedCopyRatios.javaXmx</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"7G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"3G"</code><br />
     The maximum memory available to the program. Should be lower than `memory` to accommodate JVM overhead.
 </dd>
 <dt id="PairedCnvCalling.controlSample.plotDenoisedCopyRatios.memory"><a href="#PairedCnvCalling.controlSample.plotDenoisedCopyRatios.memory">PairedCnvCalling.controlSample.plotDenoisedCopyRatios.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"32G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"4G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PairedCnvCalling.controlSample.plotDenoisedCopyRatios.timeMinutes"><a href="#PairedCnvCalling.controlSample.plotDenoisedCopyRatios.timeMinutes">PairedCnvCalling.controlSample.plotDenoisedCopyRatios.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>2</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PairedCnvCalling.controlSample.plotModeledSegments.javaXmx"><a href="#PairedCnvCalling.controlSample.plotModeledSegments.javaXmx">PairedCnvCalling.controlSample.plotModeledSegments.javaXmx</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"7G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"3G"</code><br />
     The maximum memory available to the program. Should be lower than `memory` to accommodate JVM overhead.
 </dd>
 <dt id="PairedCnvCalling.controlSample.plotModeledSegments.memory"><a href="#PairedCnvCalling.controlSample.plotModeledSegments.memory">PairedCnvCalling.controlSample.plotModeledSegments.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"21G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"4G"</code><br />
     The amount of memory this job will use.
+</dd>
+<dt id="PairedCnvCalling.controlSample.plotModeledSegments.timeMinutes"><a href="#PairedCnvCalling.controlSample.plotModeledSegments.timeMinutes">PairedCnvCalling.controlSample.plotModeledSegments.timeMinutes</a></dt>
+<dd>
+    <i>Int </i><i>&mdash; Default:</i> <code>2</code><br />
+    The maximum amount of time the job will run in minutes.
 </dd>
 <dt id="PairedCnvCalling.dockerImages"><a href="#PairedCnvCalling.dockerImages">PairedCnvCalling.dockerImages</a></dt>
 <dd>
-    <i>Map[String,String] </i><i>&mdash; Default:</i> <code>{"gatk": "broadinstitute/gatk:4.1.4.0"}</code><br />
+    <i>Map[String,String] </i><i>&mdash; Default:</i> <code>{"gatk": "broadinstitute/gatk:4.1.8.0"}</code><br />
     The docker images used. Changing this may result in errors which the developers may choose not to address.
 </dd>
 <dt id="PairedCnvCalling.minimumContigLength"><a href="#PairedCnvCalling.minimumContigLength">PairedCnvCalling.minimumContigLength</a></dt>
