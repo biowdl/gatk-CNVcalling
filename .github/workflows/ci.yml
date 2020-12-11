@@ -1,34 +1,34 @@
-name: Continuous integration
+name: Continuous Integration
 
-on: 
+on:
   pull_request:
     paths:
-      - "**.wdl"  # Workflow files and task 
-      - "**.yml"  # Ci configuration, tests and docker images 
+      - "**.wdl"  # Workflow files and task.
+      - "**.yml"  # Ci configuration, tests and docker images.
       - "!docs/**"
 
 defaults:
   run:
     # This is needed for miniconda, see:
-    # https://github.com/marketplace/actions/setup-miniconda#important
-    shell: bash -l {0}  
+    # https://github.com/marketplace/actions/setup-miniconda#important.
+    shell: bash -l {0}
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     name: Womtool validate and submodule up to date.
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2.3.4 # https://github.com/actions/checkout.
         with:
           submodules: recursive
-      - name: install miniconda
-        uses: conda-incubator/setup-miniconda@v2.0.1
+      - name: Install miniconda.
+        uses: conda-incubator/setup-miniconda@v2.0.1 # https://github.com/conda-incubator/setup-miniconda.
         with:
           channels: conda-forge,bioconda,defaults
         # Conda-incubator uses 'test' environment by default.
-      - name: install requirements
+      - name: Install requirements.
         run: conda install -n test cromwell miniwdl wdl-aid
-      - name: run linting
+      - name: Run linting.
         run: bash scripts/biowdl_lint.sh
 
   # Uncomment this once tests are defined for this repo.
