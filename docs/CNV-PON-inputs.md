@@ -74,7 +74,7 @@ PanelOfNormals.
 <dt id="PanelOfNormals.annotateIntervals.featureQueryLookahead"><a href="#PanelOfNormals.annotateIntervals.featureQueryLookahead">PanelOfNormals.annotateIntervals.featureQueryLookahead</a></dt>
 <dd>
     <i>Int </i><i>&mdash; Default:</i> <code>1000000</code><br />
-    Equivalent to gatk AnnotateIntervals' `--feature-query-lookahead` option
+    Equivalent to gatk AnnotateIntervals' `--feature-query-lookahead` option.
 </dd>
 <dt id="PanelOfNormals.annotateIntervals.intervalMergingRule"><a href="#PanelOfNormals.annotateIntervals.intervalMergingRule">PanelOfNormals.annotateIntervals.intervalMergingRule</a></dt>
 <dd>
@@ -88,7 +88,7 @@ PanelOfNormals.
 </dd>
 <dt id="PanelOfNormals.annotateIntervals.memory"><a href="#PanelOfNormals.annotateIntervals.memory">PanelOfNormals.annotateIntervals.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"3G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"3GiB"</code><br />
     The amount of memory this job will use.
 </dd>
 <dt id="PanelOfNormals.annotateIntervals.timeMinutes"><a href="#PanelOfNormals.annotateIntervals.timeMinutes">PanelOfNormals.annotateIntervals.timeMinutes</a></dt>
@@ -108,7 +108,7 @@ PanelOfNormals.
 </dd>
 <dt id="PanelOfNormals.collectReadCounts.memory"><a href="#PanelOfNormals.collectReadCounts.memory">PanelOfNormals.collectReadCounts.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"8G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"8GiB"</code><br />
     The amount of memory this job will use.
 </dd>
 <dt id="PanelOfNormals.collectReadCounts.timeMinutes"><a href="#PanelOfNormals.collectReadCounts.timeMinutes">PanelOfNormals.collectReadCounts.timeMinutes</a></dt>
@@ -123,7 +123,7 @@ PanelOfNormals.
 </dd>
 <dt id="PanelOfNormals.createReadCountPanelOfNormals.memory"><a href="#PanelOfNormals.createReadCountPanelOfNormals.memory">PanelOfNormals.createReadCountPanelOfNormals.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"8G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"8GiB"</code><br />
     The amount of memory this job will use.
 </dd>
 <dt id="PanelOfNormals.createReadCountPanelOfNormals.timeMinutes"><a href="#PanelOfNormals.createReadCountPanelOfNormals.timeMinutes">PanelOfNormals.createReadCountPanelOfNormals.timeMinutes</a></dt>
@@ -158,7 +158,7 @@ PanelOfNormals.
 </dd>
 <dt id="PanelOfNormals.preprocessIntervals.memory"><a href="#PanelOfNormals.preprocessIntervals.memory">PanelOfNormals.preprocessIntervals.memory</a></dt>
 <dd>
-    <i>String </i><i>&mdash; Default:</i> <code>"4G"</code><br />
+    <i>String </i><i>&mdash; Default:</i> <code>"4GiB"</code><br />
     The amount of memory this job will use.
 </dd>
 <dt id="PanelOfNormals.preprocessIntervals.padding"><a href="#PanelOfNormals.preprocessIntervals.padding">PanelOfNormals.preprocessIntervals.padding</a></dt>

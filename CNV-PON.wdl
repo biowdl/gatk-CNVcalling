@@ -106,5 +106,9 @@ workflow PanelOfNormals {
                                       category: "advanced"}
         dockerImages: {description: "The docker images used. Changing this may result in errors which the developers may choose not to address.",
                        category: "advanced"}
+        # Outputs
+        preprocessedIntervals: {description: "The intervals used by PreprocessIntervals."}
+        PON: {description: "Panel of Normals"}
+        annotatedIntervals: {description: "This is a tab-separated values (TSV) file with a SAM-style header containing a sequence dictionary, a row specifying the column headers for the contained annotations, and the corresponding entry rows."}
     }
 }
